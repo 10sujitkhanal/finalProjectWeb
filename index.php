@@ -108,7 +108,7 @@
                       </div>
                     </div>
                 </a>
-                <?php } }?>
+                <?php } }else{ echo "<h1>No course Yet</h1>"; }?>
 
  
             </div>
@@ -118,37 +118,6 @@
     </section>
 
 <?php include 'footer.php'; ?> 
-</body>
-</html>
-
-
-
-        <?php if (mysqli_num_rows($result) > 0) { 
-            while($row = mysqli_fetch_array($result)) {
-        ?>
-        <a href="course-detail.php?course_id=<?= $row['id'] ?>&chapter_id=1">
-            <div class="card">
-                <div class="card__image-holder">
-                  <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
-                </div>
-                <div class="card-title">
-                  <h2>
-                      <?= $row['course_name'] ?>
-                  </h2>
-                </div>
-                <div class="card-flap flap1">
-                  <div class="card-description">
-                    <?= $row['course_detail'] ?>
-                  </div>
-                </div>
-            </div>
-        </a>
-        <?php
-            }
-        }
-        ?>
-    </div>
-</div>
 </body>
 </html>
 
