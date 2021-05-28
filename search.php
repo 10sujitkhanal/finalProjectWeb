@@ -51,7 +51,7 @@ require('auth/auth.php');
                       </div>
                     </div>
                 </a>
-                <?php } }?>
+                <?php } } else{ echo "<h1>No course Found</h1>"; }?>
 
  
             </div>
